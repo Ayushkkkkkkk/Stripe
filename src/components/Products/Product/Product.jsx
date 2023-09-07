@@ -1,10 +1,10 @@
 import "./Product.scss";
 
-import prod from "../../../assets/products/watch-prod-1.webp"
+import prod from "../../../assets/products/earbuds-prod-1.webp";
 const Product = () => {
     return <div className="product-card">
         <div className="thumbnail">
-            <img src="" alt="" />
+            <img src={prod} alt="" />
         </div>
 
         <div className="prod-details">
