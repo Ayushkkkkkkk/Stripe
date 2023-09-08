@@ -1,9 +1,22 @@
 import "./Home.scss";
+import React, { useEffect, useContext } from "react";
+
 
 import Banner from "./Banner/Banner";
 import Category from "./Category/Category";
+import { fetchDataFromApi } from "../../utils/api";
 import Products from "../Products/Products";
 const Home = () => {
+useEffect(() => {
+  getCategories();
+}, []);
+
+
+const getCategories = () => {
+  fetchDataFromApi("/api/categories?populate=*").then((res) => {
+    console.log(res);
+  });
+};
   return (
     <div>
       <Banner />
