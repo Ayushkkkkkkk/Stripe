@@ -38,11 +38,11 @@ const Header = () => {
     <header className={`main-header ${scrolled ? "sticky-header" : ""}`}>
       <div className="header-content">
         <ul className="left">
-          <li>Home</li>
+          <li onClick={()=> navigate("/")}>Home</li>
           <li>About</li>
           <li>Categories</li>
         </ul>
-        <div className="center">OYOROHIT</div>
+        <div className="center" onClick={()=> navigate("/")}>OYOROHIT</div>
         <div className="right">
           <TbSearch onClick= { ()=> setShowSearch(true) }/>
           <AiOutlineHeart />
