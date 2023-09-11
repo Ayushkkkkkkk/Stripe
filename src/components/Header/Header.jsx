@@ -31,6 +31,8 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
   }, []);
 
+  const { cartCount} = useContext(Context);
+
   return (
 
     <>
@@ -48,6 +50,7 @@ const Header = () => {
           <AiOutlineHeart />
           <span className="cart-icon" onClick= { ()=> setShowCart(true) }>
             <CgShoppingCart />
+            {!!cartCount && <span>{cartCount}</span>}
           </span>
         </div>
       </div>
